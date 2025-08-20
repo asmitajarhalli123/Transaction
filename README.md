@@ -66,7 +66,7 @@ This project is built using a combination of modern web development technologies
 
 ## Output Section
 
-Here are some screenshots of the MovieFlix application in action:
+Here are some screenshots of the Transaction application in action:
 
 Main Screen:
 <br>
