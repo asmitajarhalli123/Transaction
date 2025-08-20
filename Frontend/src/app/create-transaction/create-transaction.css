@@ -1,0 +1,29 @@
+/* Layout wrapper for better spacing over background */
+.create-tx-wrapper {
+  min-height: 100vh;
+}
+
+/* Card styling */
+.create-tx-card {
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.create-tx-card .card-header {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
+
+/* Improve form controls */
+.form-label {
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.5rem;
+}
+
+.input-group-text {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}

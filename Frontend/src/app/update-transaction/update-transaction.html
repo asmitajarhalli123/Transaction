@@ -1,0 +1,41 @@
+<h2>Update Transaction</h2>
+<p *ngIf="id as txnId">Editing transaction ID: {{ txnId }}</p>
+<p *ngIf="id === null">No transaction id provided.</p>
+
+    
+<div class="col-md-8 offset-md-3">
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Account Holder Name</label>
+    <input type="text" class="form-control" [(ngModel)]="transaction.firstName" name="firstName" placeholder="Enter Account 
+    Holder First Name">
+  </div>
+
+  <div>
+    <label>Account Holder Last Name</label>
+    <input type="text" class="form-control" [(ngModel)]="transaction.lastName" name="lastName" placeholder="Enter Account 
+    Holder Last Name">
+  </div>
+
+  <div>
+    <label>Account Number</label>
+    <input class="form-control" type="number" [(ngModel)]="transaction.userId" name="userId" placeholder="Enter Account 
+    Number">
+  </div>
+
+  <div>
+    <label>Amount</label>
+    <input class="form-control" type="number" [(ngModel)]="transaction.amount" name="amount" placeholder="Enter Amount">
+  </div>
+
+  <label>Choose a Type</label>
+    <select class="form-control" name="type" [(ngModel)]="transaction.type">
+        <option value="CREDIT">CREDIT</option>
+        <option value="DEBIT">DEBIT</option>
+        <option value="TRANSFER">TRANSFER</option>
+    </select>
+
+<br>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>

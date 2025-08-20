@@ -1,0 +1,59 @@
+<div class="welcome">
+<div class="home-container">
+  <header class="hero">
+    <h1 class="text-center" style="color: #c2e164;">Welcome to <span class="brand">TransactPro</span></h1>
+    <p  class="tagline" style="color: #FFFADC;">Your Smart Transaction Manager</p>
+    <p class="intro"  style="color: #A4DD00;">
+      Manage, track, and secure your financial transactions with ease.  
+      Transactly provides a seamless way to monitor payments, generate reports,  
+      and keep your money flow under control.
+    </p>
+
+  </header>
+  <br>
+  <br>
+
+<div class="feature-card">
+  <section class="features">
+    <h3 class="text-center">Why Choose Us?</h3>
+    <br>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3 class="text-center" style="color: #555879;">💳 Easy Payments</h3>
+        <p class="text-center" style="color: white;">Record, categorize, and track transactions in real-time.</p>
+      </div>
+      <div class="feature-card">
+        <h2 class="text-center" style="color: #555879;">📊 Smart Reports</h2>
+        <p class="text-center"style="color: white;">Get clear financial insights with auto-generated reports.</p>
+      </div>
+      <div class="feature-card">
+        <h2 class="text-center" style="color: #555879;">🔒 Secure</h2>
+        <p class="text-center" style="color: white;">Bank-level security ensures your data is always protected.</p>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+</div>
+
+
+<h1 class="history">Transaction History</h1>
+
+<div class="container" >
+<div class = "box" class="card text-white bg-dark mb-3"   style="max-width: 18rem;" *ngFor="let Transaction of transactions">
+  <div class="card-header"><h4>{{Transaction.firstName}}  {{Transaction.lastName}}</h4></div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">
+        <b>Account Number  :</b>  {{Transaction.userId}}
+        <br>
+        <span>amount  :</span>  {{Transaction.amount}}
+         <p>{{Transaction.type}}</p>
+          <a  (click)="updateTransaction(Transaction.id ?? 0)" class="btn btn-primary">Update</a>
+  </div>
+
+  </div>
+
+ 
+
+
